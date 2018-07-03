@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/btn_login"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_back"
+        android:layout_margin="20dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_fName">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter First Name"
+                android:id="@+id/user_fName"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_lName"
+            android:layout_below="@+id/layout_fName">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Last Name"
+                android:id="@+id/user_lName"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_user"
+
+            android:layout_below="@+id/layout_lName">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Username"
+                android:id="@+id/user_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_pass"
+            android:layout_below="@+id/layout_user">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Password"
+                android:id="@+id/user_pass"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_age"
+            android:layout_below="@+id/layout_pass">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Age"
+                android:id="@+id/user_age"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@+id/layout_age">
+            <TextView
+                android:layout_width="179dp"
+                android:layout_height="match_parent"
+                android:text="Select Gender"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg_gender"
+            android:onClick="onRadioButtonClicked"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/rgMale"
+                android:text="Male"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/rgFemale"
+                android:text="Female"/>
+
+        </RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
